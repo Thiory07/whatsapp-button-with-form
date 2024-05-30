@@ -1,0 +1,140 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px 7px 5px 5px;
+  font-family: Verdana;
+  font-size: 12px;
+  color: #fbfbfb;
+  background-color: #202228;
+  border-top: 2px solid #1d4e31;
+}
+
+* {
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(234, 234, 234, 0.6);
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: auto;
+  max-width: 800px;
+}
+
+form {
+  position: sticky;
+  top: 10px;
+  display: flex;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  margin-right: 15px;
+  justify-content: space-between;
+}
+
+.inputSet {
+  width: 100%;
+}
+
+label,
+input,
+pre {
+  display: block;
+  width: 100%;
+  padding: 5px 0 5px 5px;
+  margin: 0;
+  color: #fbfbfb;
+  background-color: rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 3px;
+}
+
+label {
+  background-color: inherit;
+  font-weight: bold;
+  color: #bbb;
+
+  .toRight {
+    float: right;
+    margin-right: 10px;
+  }
+}
+
+input {
+  margin-bottom: 8px;
+  box-sizing: border-box;
+
+  &:not([type="range"]) {
+    padding: 10px;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #29c46a;
+  }
+
+  &[type="submit"] {
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  &[type="range"] {
+    opacity: 0.6;
+    -webkit-appearance: none;
+    height: 10px;
+    overflow: hidden;
+    background: rgb(234, 234, 234);
+    cursor: ew-resize;
+
+    &:focus,
+    &:hover {
+      box-shadow: none;
+      opacity: 1;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #29c46a;
+      box-shadow: -1000px 0 0 995px #29c46a, 0 0 5px 2px #000;
+    }
+
+    &::-webkit-slider-thumb:hover {
+      box-shadow: 0 0 5px 2px #000, -1000px 0 0 995px #29c46a;
+    }
+  }
+}
+
+pre {
+  padding: 0px 0px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  height: 435px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  code.html {
+    background: transparent;
+  }
+}
