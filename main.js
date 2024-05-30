@@ -15,7 +15,7 @@ let size = document.querySelector("#size");
 let marginLeftRight = document.querySelector("#marginLeftRight");
 let marginTopBottom = document.querySelector("#marginTopBottom");
 let resultCode = document.querySelector("pre code.language-html");
-let waLinkEl = document.querySelector("#whatsapp-button");
+let waLinkEl = document.querySelector("#whatsapp-button a");
 
 // defining deafult values from html
 let maxMargin = parseInt(marginTopBottom.max);
