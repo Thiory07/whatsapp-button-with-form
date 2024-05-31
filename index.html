@@ -47,10 +47,18 @@
       margin-bottom: 130px;
       max-width: 320px;
       color: black;">
-        <form action="#">
+        <form action="#" style="
+        padding: 0;
+        margin: 0;"> 
           <p>Entre em contato:</p>
-          <input name="email" type="email" placeholder="test@test.com" required>
-          <input name="tel" type="tel" placeholder="(12) 1234 - 5678" required>
+          <label for="email">
+            <input name="email" type="email" placeholder="test@test.com" required>
+            <span>E-mail</span>
+          </label>
+          <label for="tel">
+            <input name="tel" type="tel" placeholder="(12) 1234 - 5678" required>
+            <span>Tel</span>
+          </label>
           <input name="tracker" type="hidden" placeholder="GCLID/DCLID/CLID">
           <input type="submit" value="Começar chat" >
         </form>
